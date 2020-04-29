@@ -1,23 +1,6 @@
-.form-input{
-  border-bottom: 1px solid #d8d8d8;
-  height: 68px;
-  margin-top: auto;
-  
-  &__title{
-    color: #b6b6b6;
-    font-size: 14px;
-    height: 20px;
-    &.active{
-      color: #48a5ea;
-    }
-  }
-  &__input input{
-    font-size: 20px;
-    border: 0;
-    margin: 12px 0;
-    outline: none;
-  }
-}
-.form-input.active{
-  border-bottom: 1px solid #48a5ea;
+.form-input {
+  font-size: 20px;
+  border: 0;
+  margin: 12px 0;
+  outline: none;
 }

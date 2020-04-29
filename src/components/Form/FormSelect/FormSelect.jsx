@@ -1,17 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import s from './FormSelect.module.scss'
+import withFormItemWrapper from '../../../hoc/withFormItemWrapper';
 
-
-function FormSelect({options, enteredIndex, setOption, ...props}) {
-  const [isActive, setActiveStatus] = useState(false);
+function FormSelect({options, enteredIndex, setOption, setActiveStatus, isActive, ...props}) {
   const changeCurrentSelect = (e) => {
     setOption(e.currentTarget.id)
   }
   return (
-    <div className={s["form-select"]}>
-      <div className={`${s["form-select__title"]} + ${( isActive? s.active : "" )}`}>{props.children}</div>
-     
       <div className={`${s["select"]} + ${( isActive? s.active : "" )}`}
             onClick={()=>{setActiveStatus(!isActive)}}>
         <div className={s["select__header"]}>
@@ -25,8 +21,7 @@ function FormSelect({options, enteredIndex, setOption, ...props}) {
                                     onClick={changeCurrentSelect}>{i.name}</div>)}
         </div>
       </div>
-    </div>
   );
 }
 
-export default FormSelect;
+export default withFormItemWrapper(FormSelect);
