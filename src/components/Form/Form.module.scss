@@ -32,26 +32,30 @@
 }
 
 .btn {
-
-  &_blue div {
+  &_blue button {
     background-color: #48a5ea;
     color: #fff;
     border: 1px solid #48a5ea;
     &:hover {
-      cursor: pointer;
       background-color: #fff;
       color: #48a5ea;
     }
   }
 
-  &_white div {
+  &_white button {
     background-color: #fff;
     color: #a0a0a0;
     border: 1px solid transparent;
     &:hover {
-      cursor: pointer;
       background-color: #a0a0a0;
       color: #fff;
     }
   }
+  & button{
+    transition: .4s;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+    
 }

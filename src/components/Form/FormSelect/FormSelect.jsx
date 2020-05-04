@@ -9,13 +9,14 @@ function FormSelect({options, enteredIndex, setOption, setActiveStatus, isActive
   }
   return (
       <div className={`${s["select"]} + ${( isActive? s.active : "" )}`}
-            onClick={()=>{setActiveStatus(!isActive)}}>
+            onClick={()=>{setActiveStatus(!isActive)}} 
+            onMouseLeave={()=>{setActiveStatus(false)}}>
         <div className={s["select__header"]}>
           <span className={s["select__current"]}>{options[enteredIndex].name}</span>
           <div className={s["select__icon"]}>{isActive? <IoIosArrowUp/>:<IoIosArrowDown/>}</div>
         </div>
 
-        <div className={s["select__body"]} onMouseLeave={()=>{setActiveStatus(false)}}>
+        <div className={s["select__body"]} >
           {options.map((i)=><div id={i.id} 
                                     className={s["select__item"]}
                                     onClick={changeCurrentSelect}>{i.name}</div>)}

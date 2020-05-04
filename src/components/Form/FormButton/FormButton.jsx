@@ -1,10 +1,10 @@
 import React from 'react';
 import s from './FormButton.module.scss'
 
-function FormButton(props) {
+function FormButton({type, ...props}) {
 
   return (
-   <div className={s["form-btn"]}>{props.children}</div>
+   <button type={type} className={s["form-btn"]}>{props.children}</button>
   );
 }
 

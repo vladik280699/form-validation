@@ -1,5 +1,4 @@
 .form-item{
-  border-bottom: 1px solid #d8d8d8;
   width: calc(50% - 18px);
   margin-top: 26px;
   
@@ -10,8 +9,5 @@
     &.active{
       color: #48a5ea;
     }
-  }
-  &.active{
-  border-bottom: 1px solid #48a5ea;
   }
 }
